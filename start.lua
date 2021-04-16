@@ -29,7 +29,7 @@ io.write('\n\27[1;31m»» The Token Is Saved\n\27[0;39;49m')
 io.write('\n\27[1;35mSend UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
 local User_Sudo = io.read():gsub('@','')
 if User_Sudo ~= '' then
-local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
+ 
 
 local User_Info =  JSON.decode(url) 
  
