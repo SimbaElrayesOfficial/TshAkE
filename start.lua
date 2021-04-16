@@ -25,33 +25,32 @@ if res ~= 200 then
 io.write('\n\27[1;31m»» Sorry The Token is not Correct \n\27[0;39;49m')
 else
 io.write('\n\27[1;31m»» The Token Is Saved\n\27[0;39;49m')
-
-io.write('\n\27[1;35mSend UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
-local User_Sudo = io.read():gsub('@','')
-if User_Sudo ~= '' then
- 
-
-local User_Info =  JSON.decode(url) 
- 
- 
- 
-io.write('\n\27[1;31m• The UserNamr Is Saved : تم حفظ معرف المطور الاسي واستخراج ايدي \n\27[0;39;49m')
- database:set(Server_Tshake.."Token_Tshake",token)
-database:set(Server_Tshake.."UserName_Tshake",User_Info.result.username)
-database:set(Server_Tshake.."Id_Tshake",User_Info.result.id)
-else
-io.write('\n\27[1;31mThe UserName was not Saved : لم يتم حفظ معرف Carbon\n\27[0;39;49m')
-end
-os.execute('lua start.lua')
+database:set(Server_Tshake.."Token_Tshake",token)
 end 
 else
 io.write('\n\27[1;31mThe Tokem was not Saved\n\27[0;39;49m')
 end 
-
+os.execute('lua start.lua')
 end
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
+if not database:get(Server_Tshake.."UserName_Tshake") then
+io.write('\n\27[1;35mSend UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
+local User_Sudo = io.read():gsub('@','')
+if User_Sudo ~= '' then
  
+ io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na≪━━━━━━𝙋𝙊𝙒𝙀𝙍 ⶄ━━━━━━≫\n\27[0;33;49m')
+local SUDOID = io.read()
+ 
+io.write('\n\27[1;31m• The UserNamr Is Saved : تم حفظ معرف المطور الاسي واستخراج ايدي \n\27[0;39;49m')
+ 
+database:set(Server_Tshake.."UserName_Tshake",User_Sudo)
+database:set(Server_Tshake.."Id_Tshake",SUDOID)
+else
+io.write('\n\27[1;31mThe UserName was not Saved : لم يتم حفظ معرف Carbon\n\27[0;39;49m')
+end 
+os.execute('lua start.lua')
+end
 
 local function Files_Tshake_Info()
 Create_Info(database:get(Server_Tshake.."Token_Tshake"),database:get(Server_Tshake.."Id_Tshake"),database:get(Server_Tshake.."UserName_Tshake"))   
