@@ -18,7 +18,7 @@ print("\27[34m"..[[
 >> Features fast and powerful
                                                                                                                                                                          
 >> CH > @DDDDiD
->> CH > @TshakeX 
+>> CH > @JO_HN5 
 ]].."\27[m")
 
 io.popen("mkdir Tshake_Files")
@@ -6128,8 +6128,8 @@ if text == ("تحديث السورس") and DevTshake(msg) then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
 os.execute('rm -rf Tshake.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/SimbaElrayesOfficial/TshAkE/master/Tshake.lua', 'Tshake.lua') 
+download_to_file('https://raw.githubusercontent.com/SimbaElrayesOfficial/TshAkE/master/start.lua', 'start.lua') 
 dofile('Tshake.lua')  
 return false
 end
@@ -6244,7 +6244,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevTshake(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/TEAMTshakeX/files_tshake/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/SimbaElrayesOfficial/files_tshake/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -6396,25 +6396,19 @@ end
 if text == "تحديث" and DevTshake(msg) then
 dofile("Tshake.lua")  
 send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
-end
-if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
-Text = [[
-🌐┇ Welcome to Source
-🚩┇[ Tm   -  ”X”](t.me/TshakeX)
- ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-🦁┇[Tshake'X' TEAM](t.me/TshakeX)
-
-📂┇[Source Files](t.me/TshakeX_files)
-
-💠┇[instaBoT](t.me/KKWBOT)
-
-📥┇[YouTube downloader](t.me/bhhBOT)
-
-🔰┇[CHANNEL Tumblr](t.me/DDDDID)
- ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-[📮┇ConnectDeV](t.me/tshakebbot)
+end 
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
+local Text = [[
+✨ Ⓙ Ⓞ Ⓗ Ⓝ ✨
 ]]
-send(msg.chat_id_, msg.id_,Text)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𓆩 ᴀʟᴇх 𓆪',url="t.me/U550p"}},
+{{text = '𓆩 الباشمبرمج سيمبا 𓆪', url="t.me/Deletedx2"}},
+{{text = 'قناة البرمجة ⚙️', url="t.me/TYL_ER"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'حذف' or text == 'رابط الحذف' or text == 'بوت الحذف' then
 Text = [[
@@ -6434,18 +6428,18 @@ local Text =[[
 🎖┇م4 ~⪼ لعرض اوامر المنشئين
 👤┇م5 ~⪼ لعرض اوامر المطورين
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=msg.sender_user_id_.."/help1"},{text = 'م2', callback_data=msg.sender_user_id_.."/help2"},{text = 'م3', callback_data=msg.sender_user_id_.."/help3"},
+{text = '❶', callback_data=msg.sender_user_id_.."/help1"},{text = '❷', callback_data=msg.sender_user_id_.."/help2"},{text = '❸', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=msg.sender_user_id_.."/help4"},
+{text = '❹', callback_data=msg.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=msg.sender_user_id_.."/help5"},
+{text = '❺', callback_data=msg.sender_user_id_.."/help5"},
 },
 {
 {text = 'اوامر التعطيل', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=msg.sender_user_id_.."/homelocks"},
@@ -6456,7 +6450,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 end
 end
 
-if text == 'م1' and Addictive(msg) then
+if text == '❶' and Addictive(msg) then
 Text = [[
 📮┇ اوامر حمايه المجموعه
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6489,12 +6483,12 @@ Text = [[
 🔐┇الكلايش
 🔐┇السيلفي
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇Ch ~⪼ [@TshakeX]
+📡┇Ch ~⪼ [@JO_HN5]
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
-if text == 'م2' and Addictive(msg) then
+if text == '❷' and Addictive(msg) then
 Text = [[
 🥈┇اوامر الادمنيه
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6555,12 +6549,12 @@ Text = [[
 📮┇الصلاحيات
 📮┇الرابط
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
-if text == 'م3' and Owner(msg) then
+if text == '❸' and Owner(msg) then
 Text = [[
 🥇┇ اوامر المدراء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6601,12 +6595,12 @@ Text = [[
 تغير رد المميز + النص
 تغير رد العضو + النص
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
-if text == 'م4' and Constructor(msg) then
+if text == '❹' and Constructor(msg) then
 Text = [[
 🏅┇اوامر المنشئين الاساسين 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6626,12 +6620,12 @@ Text = [[
 ➕┇اضف رسائل + العدد بالرد
 ➕┇اضف مجوهرات + العدد بالرد
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
-if text == 'م5' and DevBot(msg) then
+if text == '❺' and DevBot(msg) then
 Text = [[
 👁‍🗨┇اوامر المطور الاساسي  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6674,7 +6668,7 @@ Text = [[
 ➕┇اذاعه بالتثبيت 
 ➕┇الاحصائيات 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -7354,8 +7348,8 @@ if text == "تحديث السورس 📥" then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
 os.execute('rm -rf Tshake.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/TEAMTshakeX/TshAkEx/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/SimbaElrayesOfficial/TshAkE/master/Tshake.lua', 'Tshake.lua') 
+download_to_file('https://raw.githubusercontent.com/SimbaElrayesOfficial/TshAkE/master/start.lua', 'start.lua') 
 dofile('Tshake.lua')  
 return false
 end
@@ -7408,18 +7402,18 @@ local Teext =[[
 🔐┇الكلايش
 🔐┇السيلفي
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇Ch ~⪼ [@TshakeX]
+📡┇Ch ~⪼ [@JO_HN5]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '❶', callback_data=data.sender_user_id_.."/help1"},{text = '❷', callback_data=data.sender_user_id_.."/help2"},{text = '❸', callback_data=data.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '❹', callback_data=data.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '❺', callback_data=data.sender_user_id_.."/help5"},
 },
 {
 {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
@@ -7490,18 +7484,18 @@ local Teext =[[
 📮┇الصلاحيات
 📮┇الرابط
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '❶', callback_data=data.sender_user_id_.."/help1"},{text = '❷', callback_data=data.sender_user_id_.."/help2"},{text = '❸', callback_data=data.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '❹', callback_data=data.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '❺', callback_data=data.sender_user_id_.."/help5"},
 },
 {
 {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
@@ -7550,18 +7544,18 @@ local Teext =[[
 تغير رد المميز + النص
 تغير رد العضو + النص
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '❶', callback_data=data.sender_user_id_.."/help1"},{text = '❷', callback_data=data.sender_user_id_.."/help2"},{text = '❸', callback_data=data.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '❹', callback_data=data.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '❺', callback_data=data.sender_user_id_.."/help5"},
 },
 {
 {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
@@ -7591,18 +7585,18 @@ local Teext =[[
 ➕┇اضف رسائل + العدد بالرد
 ➕┇اضف مجوهرات + العدد بالرد
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '❶', callback_data=data.sender_user_id_.."/help1"},{text = '❷', callback_data=data.sender_user_id_.."/help2"},{text = '❸', callback_data=data.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '❹', callback_data=data.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '❺', callback_data=data.sender_user_id_.."/help5"},
 },
 {
 {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
@@ -7654,18 +7648,19 @@ local Teext =[[
 ➕┇اذاعه بالتثبيت 
 ➕┇الاحصائيات 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 keyboard = {} 
+
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '❶', callback_data=data.sender_user_id_.."/help1"},{text = '❷', callback_data=data.sender_user_id_.."/help2"},{text = '❸', callback_data=data.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '❹', callback_data=data.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '❺', callback_data=data.sender_user_id_.."/help5"},
 },
 {
 {text = 'الاوامر الرئيسيه', callback_data=data.sender_user_id_.."/help"},
@@ -7685,18 +7680,18 @@ local Teext =[[
 🎖┇م4 ~⪼ لعرض اوامر المنشئين
 👤┇م5 ~⪼ لعرض اوامر المطورين
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-📡┇CH [@TshakeX]
+📡┇CH [@JO_HN5]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'م1', callback_data=data.sender_user_id_.."/help1"},{text = 'م2', callback_data=data.sender_user_id_.."/help2"},{text = 'م3', callback_data=data.sender_user_id_.."/help3"},
+{text = '❶', callback_data=data.sender_user_id_.."/help1"},{text = '❷', callback_data=data.sender_user_id_.."/help2"},{text = '❸', callback_data=data.sender_user_id_.."/help3"},
 },
 {
-{text = 'م4', callback_data=data.sender_user_id_.."/help4"},
+{text = '❹', callback_data=data.sender_user_id_.."/help4"},
 },
 {
-{text = 'م5', callback_data=data.sender_user_id_.."/help5"},
+{text = '❺', callback_data=data.sender_user_id_.."/help5"},
 },
 {
 {text = 'اوامر التعطيل', callback_data=data.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=data.sender_user_id_.."/homelocks"},
