@@ -4438,7 +4438,7 @@ tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",
 x = 0
 for k, v in pairs(del.members_) do
 tdcli_function({ID = "GetUser",user_id_ = v.user_id_},function(b,data) 
-if data.first_name_ == true then
+if data.id_ then
 Kick_Group(msg.chat_id_, data.id_)
  x = x + 1
 
@@ -4448,14 +4448,14 @@ end
 
 send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
 if x > 1 then
-  KickPeopel(msg) 
+ -- KickPeopel(msg) 
   end
 end,nil)
 end
 end
 if text == 'سيمبا متعصب'   then  
 send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
-  KickPeopel(msg) 
+ -- KickPeopel(msg) 
 end
 
 if text == "تفعيل ردود المدير" and Owner(msg) then   
