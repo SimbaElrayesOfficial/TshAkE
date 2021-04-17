@@ -4446,7 +4446,7 @@ end
 end,nil)
 end
 
---send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
+send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
 if x > 1 then
   KickPeopel(msg) 
   end
