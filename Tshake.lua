@@ -4432,7 +4432,6 @@ send(msg.chat_id_, msg.id_,'☑┇تم طرد الحسابات المحذوفه'
 end,nil)
 end
 end
-
 function KickPeopel(msg) 
 if Addictive(msg) then    
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),offset_ = 0,limit_ = 1000}, function(arg,del)
@@ -4442,26 +4441,22 @@ tdcli_function({ID = "GetUser",user_id_ = v.user_id_},function(b,data)
 if data.id_ then
 Kick_Group(msg.chat_id_, data.id_)
  x = x + 1
-
 end
 end,nil)
 end
 
-send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
+--send(msg.chat_id_, msg.id_,'☑┇تم بنجاح')
 if x > 1 then
  -- KickPeopel(msg) 
   end
 end,nil)
 end
 end
-if text == 'سيمبا متعصب' and Owner(msg)  then  
-send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
- -- KickPeopel(msg) 
-end
+ 
 
 if text == "تفعيل ردود المدير" and Owner(msg) then   
 database:del(bot_id.."Tshake:Reply:Manager"..msg.chat_id_)  
-send(msg.chat_id_, msg.id_,"📛┇تم تفعيل ردود المدير111") 
+send(msg.chat_id_, msg.id_,"📛┇تم تفعيل ردود المدير") 
 end
 if text == "تعطيل ردود المدير" and Owner(msg) then  
 database:set(bot_id.."Tshake:Reply:Manager"..msg.chat_id_,true)  
