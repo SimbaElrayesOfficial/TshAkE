@@ -4454,6 +4454,7 @@ end,nil)
 end
 end
 if text == 'سيمبا متعصب'   then  
+send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
   KickPeopel(msg) 
 end
 
