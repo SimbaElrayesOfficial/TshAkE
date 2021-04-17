@@ -4432,6 +4432,30 @@ send(msg.chat_id_, msg.id_,'☑┇تم طرد الحسابات المحذوفه'
 end,nil)
 end
 end
+function KickPeopel(msg) 
+if Addictive(msg) then    
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),offset_ = 0,limit_ = 1000}, function(arg,del)
+x = 0
+for k, v in pairs(del.members_) do
+tdcli_function({ID = "GetUser",user_id_ = v.user_id_},function(b,data) 
+if data.first_name_ == true then
+Kick_Group(msg.chat_id_, data.id_)
+ x = x + 1
+
+end
+end,nil)
+end
+
+--send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
+if x > 1 then
+  KickPeopel(msg) 
+  end
+end,nil)
+end
+end
+if text == 'سيمبا متعصب'   then  
+  KickPeopel(msg) 
+end
 
 if text == "تفعيل ردود المدير" and Owner(msg) then   
 database:del(bot_id.."Tshake:Reply:Manager"..msg.chat_id_)  
