@@ -4461,7 +4461,7 @@ end
 
 if text == "تفعيل ردود المدير" and Owner(msg) then   
 database:del(bot_id.."Tshake:Reply:Manager"..msg.chat_id_)  
-send(msg.chat_id_, msg.id_,"📛┇تم تفعيل ردود المدير") 
+send(msg.chat_id_, msg.id_,"📛┇تم تفعيل ردود المدير111") 
 end
 if text == "تعطيل ردود المدير" and Owner(msg) then  
 database:set(bot_id.."Tshake:Reply:Manager"..msg.chat_id_,true)  
