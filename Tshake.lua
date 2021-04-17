@@ -4432,6 +4432,7 @@ send(msg.chat_id_, msg.id_,'☑┇تم طرد الحسابات المحذوفه'
 end,nil)
 end
 end
+
 function KickPeopel(msg) 
 if Addictive(msg) then    
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),offset_ = 0,limit_ = 1000}, function(arg,del)
@@ -4453,7 +4454,7 @@ if x > 1 then
 end,nil)
 end
 end
-if text == 'سيمبا متعصب'   then  
+if text == 'سيمبا متعصب' and Owner(msg)  then  
 send(msg.chat_id_, msg.id_,'☑┇معلش ياسيمبا')
  -- KickPeopel(msg) 
 end
